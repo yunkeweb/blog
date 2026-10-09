@@ -1,0 +1,17 @@
+title: 云客
+description: 记录软件、产品与日常思考。
+url: https://www.yunkeweb.com
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

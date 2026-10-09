@@ -12,7 +12,7 @@ title: 首页
 ## 最新文章
 
 <div class="post-list">
-{% for post in site.posts %}
+{% for post in site.posts limit: 5 %}
   <article class="post-preview">
     <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }}{% if post.categories.size > 0 %} · {{ post.categories | join: " / " }}{% endif %}</p>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -21,3 +21,5 @@ title: 首页
   </article>
 {% endfor %}
 </div>
+
+<p class="archive-link"><a href="/articles/">查看全部文章 →</a></p>

@@ -15,9 +15,9 @@ title: 首页
 {% for post in site.posts %}
   <article class="post-preview">
     <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }}{% if post.categories.size > 0 %} · {{ post.categories | join: " / " }}{% endif %}</p>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-    <a class="read-more" href="{{ post.url | relative_url }}">阅读全文 →</a>
+    <a class="read-more" href="{{ post.url }}">阅读全文 →</a>
   </article>
 {% endfor %}
 </div>

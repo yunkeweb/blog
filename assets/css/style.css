@@ -43,4 +43,64 @@ main > h2 { font-size: 27px; margin-top: 42px; }
 .archive-item h3 { margin: 0; font-size: 20px; }
 .archive-item p { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
 .site-footer { margin-top: 84px; padding: 27px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+
+/* Article reading layout. */
+.post-wrap { width: min(1080px, calc(100% - 40px)); }
+.post-page { padding-top: 48px; }
+.post-header { max-width: 720px; margin-bottom: 32px; }
+.post-back { display: inline-block; color: var(--muted); font-size: 13px; margin-bottom: 36px; }
+.post-header h1 { max-width: none; font-size: 44px; margin: 12px 0 16px; }
+.post-description { margin: 0; color: var(--muted); font-size: 16px; }
+.post-layout { display: grid; grid-template-columns: minmax(0, 720px) minmax(0, 1fr); gap: 56px; align-items: start; }
+.post-main { grid-column: 1; grid-row: 1; min-width: 0; }
+.post-sidebar { grid-column: 2; grid-row: 1; position: sticky; top: 32px; }
+.post-sidebar[hidden] { display: none; }
+.post-toc { border-left: 1px solid var(--line); padding-left: 20px; }
+.post-toc summary { font-size: 13px; font-weight: 700; cursor: pointer; padding: 8px 0; }
+.post-toc nav { display: block; max-height: calc(100dvh - 130px); overflow-y: auto; margin-top: 12px; }
+.post-toc ol { list-style: none; padding: 0; margin: 0; }
+.post-toc li { margin: 0 0 4px; }
+.post-toc a { display: block; padding: 6px 8px; border-left: 2px solid transparent; color: var(--muted); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.post-toc a:hover { color: var(--accent); }
+.post-toc a[aria-current] { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
+.post-toc .toc-subheading { padding-left: 12px; }
+.post-cover { margin: 0 0 36px; }
+.post-cover img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 4px; }
+.post-cover figcaption { margin-top: 8px; text-align: right; color: var(--muted); font-size: 11px; }
+.post-cover figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+.post-content { font-size: 17px; line-height: 1.95; overflow-wrap: anywhere; }
+.post-content > :first-child { margin-top: 0; }
+.post-content p { margin: 0 0 24px; }
+.post-content h2 { font-size: 27px; margin: 48px 0 20px; }
+.post-content h3 { font-size: 21px; margin: 32px 0 16px; }
+.post-content h2, .post-content h3 { scroll-margin-top: 32px; }
+.post-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.post-content ul, .post-content ol { padding-left: 24px; }
+.post-content li { margin: 8px 0; }
+.post-content blockquote { margin: 28px 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--accent); color: var(--muted); }
+.post-content blockquote p:last-child { margin-bottom: 0; }
+.post-content img { max-width: 100%; height: auto; }
+.post-content pre { overflow-x: auto; padding: 20px; background: #eae7df; border-radius: 4px; }
+.post-content code { font-size: 0.9em; }
+.post-content table { display: block; overflow-x: auto; border-collapse: collapse; }
+.post-content th, .post-content td { padding: 8px 12px; border: 1px solid var(--line); }
+.post-content hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+.post-end { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.post-end a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 1023px) {
+  .post-wrap { max-width: 720px; }
+  .post-layout { display: flex; flex-direction: column; gap: 28px; }
+  .post-sidebar { position: static; width: 100%; }
+  .post-toc { border: 1px solid var(--line); border-radius: 4px; padding: 8px 16px; }
+  .post-toc nav { max-height: 45dvh; margin: 8px 0; }
+}
+@media (max-width: 520px) {
+  .post-page { padding-top: 28px; }
+  .post-back { margin-bottom: 28px; }
+  .post-header h1 { font-size: 32px; }
+  .post-description { font-size: 15px; }
+  .post-content { font-size: 16px; }
+  .post-content h2 { font-size: 24px; margin-top: 36px; }
+}
 @media (max-width: 520px) { .header-content { min-height: 64px; } .brand span { display: none; } nav { gap: 14px; } .intro { padding: 65px 0 48px; } main > h1 { font-size: 33px; margin-top: 52px; } .archive-item { grid-template-columns: 50px 1fr; gap: 12px; } .archive-category { grid-column: 2; } }

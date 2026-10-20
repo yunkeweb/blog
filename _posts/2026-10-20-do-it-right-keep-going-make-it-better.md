@@ -1,12 +1,14 @@
 ---
-layout: default
+layout: post
 title: "先把事情做对，然后坚持下去，最后做好它"
 date: 2026-10-20 23:20:00 +0800
 categories: [随笔]
 description: "先确认方向和基本要求，再用持续行动积累反馈，让质量在一次次修正中生长。"
+cover: /assets/images/article-cover.jpg
+cover_alt: "云雾之间，阳光照亮连绵的山峰。"
+cover_credit: "图片来源 Unsplash"
+cover_source: https://unsplash.com/photos/twukN12EN7c
 ---
-
-# 先把事情做对，然后坚持下去，最后做好它
 
 做一件事的时候，我们很容易同时向自己提出太多要求：方向要正确，进度要快，结果还得足够漂亮。要求一多，反而迟迟迈不出第一步。即便开始了，也可能因为早期表现不够好，很快失去耐心。
 

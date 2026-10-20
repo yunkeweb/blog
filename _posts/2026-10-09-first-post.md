@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: post
 title: "第一篇博客：从这里开始"
 date: 2026-10-09 09:00:00 +0800
 categories: [随笔]
 description: "第一篇文章不用承担太多，它只需要让开始发生。"
 ---
-
-# 第一篇博客：从这里开始
 
 这是这个博客的第一篇文章。
 

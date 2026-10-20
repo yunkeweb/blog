@@ -8,7 +8,7 @@
 
 ```markdown
 ---
-layout: default
+layout: post
 title: "文章标题"
 date: 2026-10-09 09:00:00 +0800
 categories: [随笔]
@@ -19,6 +19,17 @@ description: "文章摘要"
 ```
 
 推送到 `main` 后，GitHub Actions 会自动构建并发布到 GitHub Pages。
+
+文章标题由模板生成，正文从段落或 `## 二级标题` 开始即可；二、三级标题会自动生成文章目录。
+
+需要封面时，在 front matter 中添加以下字段，并把图片放进 `assets/images/`：
+
+```yaml
+cover: /assets/images/article-cover.jpg
+cover_alt: "图片内容的简短描述"
+cover_credit: "摄影作者与平台"
+cover_source: https://unsplash.com/photos/twukN12EN7c
+```
 
 ## 本地预览
 

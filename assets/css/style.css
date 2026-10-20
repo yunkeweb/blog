@@ -51,7 +51,7 @@ main > h2 { font-size: 27px; margin-top: 42px; }
 .post-back { display: inline-block; color: var(--muted); font-size: 13px; margin-bottom: 36px; }
 .post-header h1 { max-width: none; font-size: 44px; margin: 12px 0 16px; }
 .post-description { margin: 0; color: var(--muted); font-size: 16px; }
-.post-layout { display: grid; grid-template-columns: minmax(0, 720px) minmax(0, 1fr); gap: 56px; align-items: start; }
+.post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 48px; align-items: start; min-width: 0; }
 .post-main { grid-column: 1; grid-row: 1; min-width: 0; }
 .post-sidebar { grid-column: 2; grid-row: 1; position: sticky; top: 32px; }
 .post-sidebar[hidden] { display: none; }
@@ -65,7 +65,8 @@ main > h2 { font-size: 27px; margin-top: 42px; }
 .post-toc a[aria-current] { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
 .post-toc .toc-subheading { padding-left: 12px; }
 .post-cover { margin: 0 0 36px; }
-.post-cover img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 4px; }
+.post-cover { max-width: 100%; }
+.post-cover img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 4px; }
 .post-cover figcaption { margin-top: 8px; text-align: right; color: var(--muted); font-size: 11px; }
 .post-cover figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 .post-content { font-size: 17px; line-height: 1.95; overflow-wrap: anywhere; }
@@ -88,10 +89,11 @@ main > h2 { font-size: 27px; margin-top: 42px; }
 .post-end { display: flex; justify-content: space-between; gap: 16px; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 .post-end a { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-@media (max-width: 1023px) {
+@media (max-width: 700px) {
   .post-wrap { max-width: 720px; }
   .post-layout { display: flex; flex-direction: column; gap: 28px; }
-  .post-sidebar { position: static; width: 100%; }
+  .post-main { order: 1; width: 100%; }
+  .post-sidebar { order: 2; position: static; width: 100%; }
   .post-toc { border: 1px solid var(--line); border-radius: 4px; padding: 8px 16px; }
   .post-toc nav { max-height: 45dvh; margin: 8px 0; }
 }
